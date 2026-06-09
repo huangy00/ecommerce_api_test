@@ -29,7 +29,7 @@ jobs:
         pytest -s -v --alluredir=./reports/allure-results --clean-alluredir
 
     - name: Upload Allure Results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: allure-results
