@@ -1,0 +1,25 @@
+# 登录接口数据
+login_data:
+  username: "mor_2314"
+  password: "83r5^_"
+
+# 商品查询接口数据
+product_data:
+  product_id: 1
+
+# 【新增】登录接口测试用例数据（用于数据驱动）
+login_cases:
+  - case_name: "正确的账号密码登录"
+    username: "mor_2314"
+    password: "83r5^_"
+    expected_status: 200
+    
+  - case_name: "错误的密码登录"
+    username: "mor_2314"
+    password: "wrong_password"
+    expected_status: 401
+    
+  - case_name: "账号为空登录"
+    username: ""
+    password: "83r5^_"
+    expected_status: 401
